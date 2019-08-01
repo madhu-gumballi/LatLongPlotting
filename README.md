@@ -10,3 +10,7 @@ Dataset of mobile network towers was obtained from opencellid.org. This data set
 mexico_mno_generations.py
 
 Here we filter the mobile network tower location data based on 2G/3G/4G network technology and plot each of them seperately to show the geograhic spread across Mexico. 
+
+
+mexico.csv
+This is a sample dataset of mobile network towers in Mexico. The full dataset can be downloaded from opencellid.org. I have randomly verified couple of coordinates on google street view and could visually see the mobile network tower. However, I cannot guarantee the accuracy of the data available on opencellid.org.
