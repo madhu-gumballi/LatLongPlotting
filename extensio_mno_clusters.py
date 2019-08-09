@@ -6,8 +6,8 @@ Created on Sun Jul 14 07:31:55 2019
 """
 
 def plotCountry(country_code, data, plt) :
+    #data = data.loc[(data['mcc'] == 404) | (data['mcc'] == 405) | (data['mcc'] == 406)]
     data = data.loc[data['mcc'] == country_code]
-
     latitude_list = data['lat']  
     longitude_list = data['lon']
     
@@ -28,11 +28,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.cluster.vq import kmeans2, whiten
 
-data = pd.read_csv("mexico.csv")
+data = pd.read_csv("cell_towers_2019-07-05-T000000.csv")
 pd.set_option('display.max_columns', None)
 
 #334 is Mexico country code
-country_code = 334
+#732 is Colombia
+#734 is Venezuela
+#740 is Ecuador
+#714 is Panama
+#404, 405 and 406 is India
+country_code = 714
 plotCountry(country_code, data, plt)
 
 plt.show()

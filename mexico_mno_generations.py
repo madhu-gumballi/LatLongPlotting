@@ -6,8 +6,9 @@ Created on Sun Jul 28 21:44:31 2019
 @author: madhugumballi
 """
 
-def plotGeneration(generation, country_code, data, plt) :
+def plotGeneration(generation, country_code, data, plt, color) :
     data1 = data.loc[data['mcc'] == country_code]
+    #data1 = data.loc[(data['mcc'] == 404) | (data['mcc'] == 405) | (data['mcc'] == 406)]
     result = data1.loc[data1['radio'] == generation]
     
     latitude_list = result['lat']  
@@ -19,21 +20,26 @@ def plotGeneration(generation, country_code, data, plt) :
     plt.scatter(coordinates[:,0], 
                 coordinates[:,1], 
                 marker="o",
-                c="b",
+                c=color,
                 s=1,
                 alpha=0.1);
 
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.cluster.vq import kmeans2, whiten
 
-data = pd.read_csv("mexico.csv")
+data = pd.read_csv("cell_towers_2019-07-05-T000000.csv")
 pd.set_option('display.max_columns', None)
 
 #334 is Mexico code
-plotGeneration('GSM', 334, data, plt)
-plotGeneration('UMTS', 334, data, plt)
-plotGeneration('LTE', 334, data, plt)
+#732 is Colombia
+#734 is Venezuela
+#740 is Ecuador
+#714 is Panama
+#404, 405 and 406 is India
+country_code = 714
+plotGeneration('GSM', country_code, data, plt, "g")
+plotGeneration('UMTS', country_code, data, plt, "b")
+plotGeneration('LTE', country_code, data, plt, "r")
             
 plt.show()
