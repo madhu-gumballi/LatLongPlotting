@@ -1,6 +1,7 @@
 # LatLongPlotting
 Plots the location of mobile network towers across any country based on data from http://opencellid.org/
 
+A sample chart generated from this code is posted here https://www.reddit.com/r/dataisbeautiful/comments/co4h59/oc_india_mobile_network_towers/
 
 mno_clusters.py
 
