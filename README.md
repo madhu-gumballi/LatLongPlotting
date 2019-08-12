@@ -1,8 +1,8 @@
 # LatLongPlotting
-Plots the location of mobile network towers across Mexico based on data from http://opencellid.org/
+Plots the location of mobile network towers across any country based on data from http://opencellid.org/
 
 
-extensio_mno_clusters.py
+mno_clusters.py
 
 Dataset of mobile network towers was obtained from opencellid.org. This data set of latitude and longitude coordinates is then plotted on a scatter chart and subjected to Kmeans clustering. The clusters which are larger in size indicate lesser density of mobile network towers whereas smaller and concentrated clusters are more denser with mobile network towers.
 
