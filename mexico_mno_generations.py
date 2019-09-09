@@ -8,7 +8,6 @@ Created on Sun Jul 28 21:44:31 2019
 
 def plotGeneration(generation, country_code, data, plt, color) :
     data1 = data.loc[data['mcc'] == country_code]
-    #data1 = data.loc[(data['mcc'] == 404) | (data['mcc'] == 405) | (data['mcc'] == 406)]
     result = data1.loc[data1['radio'] == generation]
     
     latitude_list = result['lat']  
@@ -22,7 +21,7 @@ def plotGeneration(generation, country_code, data, plt, color) :
                 marker="o",
                 c=color,
                 s=1,
-                alpha=0.1);
+                alpha=0.1)
 
 import pandas as pd
 import numpy as np
