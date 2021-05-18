@@ -36,4 +36,4 @@ Here we filter the mobile network tower location data based on 2G/3G/4G network 
 
 * mexico.csv
 
-This is a sample dataset of mobile network towers in Mexico. The full dataset can be downloaded from opencellid.org. I have randomly verified couple of coordinates on google street view and could visually see the mobile network tower. However, I cannot guarantee the accuracy of the data available on opencellid.org.
+This is a sample dataset of mobile network towers in Mexico. The full dataset can be downloaded from https://opencellid.org. I have randomly verified couple of coordinates on google street view and could visually see the mobile network tower. However, I cannot guarantee the accuracy of the data available on opencellid.org.
